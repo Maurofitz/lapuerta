@@ -300,3 +300,59 @@ body {
       flex: 1 0 100%; /* Para mostrar solo una imagen en móviles */
   }
 }
+
+.card-wrap {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  border: #3e362e;
+}
+.card-wrap .card {
+  flex: 1 0 0; /* equal column widths? */
+  border: #3e362e;
+}
+.card-wrap .card-body {
+  display: flex;
+  flex-direction: column;
+  border: #3e362e;
+}
+.card-wrap .card-body .btn {
+  margin-top: auto; /* take up available space? */
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: #3e362e;
+  width: 25px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 25px;
+}
+
+/* Responsive - Ajustes para pantallas más pequeñas */
+@media (max-width: 1200px) {
+  .card-wrap {
+    flex-wrap: wrap;
+  }
+
+  .card-wrap .card {
+    flex: 1 1 40%; /* En pantallas medianas, dos tarjetas por fila */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-wrap .card {
+    flex: 1 1 100%; /* En pantallas pequeñas, una tarjeta por fila */
+  }
+
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    width: 20px;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    width: 20px;
+  }
+}
